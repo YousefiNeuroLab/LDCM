@@ -31,6 +31,9 @@ pip install -r requirements.txt</code></pre>
     <li><strong>Visualize Results:</strong> Use the provided utilities to analyze and visualize the inferred manifold and decoding performance:
         <pre><code>python visualize.py --results_dir ./results</code></pre>
     </li>
+    <li><strong>Run on Google Colab:</strong> Use the pre-configured notebook for an interactive experience:
+        <a href="https://colab.research.google.com/github/&lt;your-username&gt;/lcdm/blob/main/examples/lcdm_colab.ipynb" target="_blank">Run on Colab</a>
+    </li>
 </ol>
 
 <h2>Documentation</h2>
