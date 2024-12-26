@@ -45,14 +45,6 @@ pip install -r requirements.txt</code></pre>
     <li><a href="examples/performance_metrics.ipynb"><strong>Performance Metrics</strong></a>: Evaluates model performance using accuracy, ROC curves, and AUC.</li>
 </ul>
 
-<h2>Benchmarks</h2>
-<p><strong>LCDM</strong> was evaluated on EEG data from a cognitive neuroscience study. The results include:</p>
-<ul>
-    <li><strong>Latent Manifold Representation:</strong> 15-dimensional manifold inferred from high-dimensional EEG data.</li>
-    <li><strong>Accuracy:</strong> 85% for "Life" vs. "Death" categorization.</li>
-    <li><strong>AUC:</strong> 0.91, indicating excellent discriminative performance.</li>
-</ul>
-
 <h2>Citation</h2>
 <p>If you use LCDM in your research, please cite us:</p>
 <pre><code>@article{lcdm2024,
