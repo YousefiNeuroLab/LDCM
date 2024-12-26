@@ -1,4 +1,4 @@
-# Decoder Model with Embedded Supervised Dimensionless Reduction Process
+# LCDM: Latent Cognitive Dynamical Model
 
 ## Motivation
 The study of high-dimensional time series data in neuroscience is essential for understanding the brain's complex mechanisms and functions. Neural recordings, such as EEG, produce vast amounts of data that are challenging to interpret directly due to their high dimensionality and inherent noise. 
