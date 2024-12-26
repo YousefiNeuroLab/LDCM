@@ -1,6 +1,4 @@
-<title>Decoder Model with Embedded Supervised Dimensionless Reduction Process</title>
-
-<h1>Decoder Model with Embedded Supervised Dimensionless Reduction Process</h1>
+<h1>LCDM: Latent Cognitive Dynamical Model</h1>
 
 <h2>Motivation</h2>
 <p>
