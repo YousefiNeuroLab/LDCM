@@ -64,54 +64,51 @@
     <li><strong>Supervised Learning:</strong> Optimizing h<sub>ϕ</sub> to predict labels l based on the latent trajectory X<sub>0</sub> … X<sub>k</sub>.</li>
 </ul>
 
-<section>
-    <h1>Solution</h1>
-    <p>
-        Our proposed framework addresses the challenges of manifold inference and neural decoding through a unified approach that integrates generative and discriminative models. This section details the two core aspects of the solution: Inference and Decoding.
-    </p>
+<h1>Solution</h1>
+<p>
+    Our proposed framework addresses the challenges of manifold inference and neural decoding through a unified approach that integrates generative and discriminative models. This section details the two core aspects of the solution: Inference and Decoding.
+</p>
 
-    <h2>Inference</h2>
-    <p>
-        The inference process focuses on uncovering the latent manifold that best represents the high-dimensional EEG data while respecting the temporal dynamics. The latent states <i>X<sub>k</sub></i> are estimated using the state evolution equation, and their alignment with the observations <i>Y<sub>k</sub></i> is achieved through the observation model.
-    </p>
-    <p>
-        To optimize the manifold inference, we employ an Expectation-Maximization (EM) algorithm in conjunction with a particle filter. The EM algorithm iteratively refines the model parameters and latent state estimates by alternating between the following steps:
-    </p>
-    <h3>E-Step (Expectation)</h3>
-    <p>
-        In this step, the posterior distribution of the latent states is approximated given the current parameters of the state-space model. The particle filter is used to estimate this posterior by representing it with a set of weighted particles. Each particle corresponds to a potential realization of the latent state, and the weights reflect the likelihood of each particle given the observed data:
-    </p>
-    <pre>w<sub>k</sub><sup>(i)</sup> ∝ P(y<sub>k</sub> | x<sub>k</sub><sup>(i)</sup>)</pre>
+<h2>Inference</h2>
+<p>
+    The inference process focuses on uncovering the latent manifold that best represents the high-dimensional EEG data while respecting the temporal dynamics. The latent states <i>X<sub>k</sub></i> are estimated using the state evolution equation, and their alignment with the observations <i>Y<sub>k</sub></i> is achieved through the observation model.
+</p>
+<p>
+    To optimize the manifold inference, we employ an Expectation-Maximization (EM) algorithm in conjunction with a particle filter. The EM algorithm iteratively refines the model parameters and latent state estimates by alternating between the following steps:
+</p>
+<h3>E-Step (Expectation)</h3>
+<p>
+    In this step, the posterior distribution of the latent states is approximated given the current parameters of the state-space model. The particle filter is used to estimate this posterior by representing it with a set of weighted particles. Each particle corresponds to a potential realization of the latent state, and the weights reflect the likelihood of each particle given the observed data:
+</p>
+<pre>w<sub>k</sub><sup>(i)</sup> ∝ P(y<sub>k</sub> | x<sub>k</sub><sup>(i)</sup>)</pre>
 
-    <h3>M-Step (Maximization)</h3>
-    <p>
-        The model parameters <i>ψ</i> (for state evolution) and <i>ϕ</i> (for the observation model) are updated by maximizing the expected joint likelihood of the latent states and observations, based on the posterior distribution estimated in the E-step:
-    </p>
-    <pre>arg max E<sub>P(x<sub>k</sub> | y<sub>k</sub>)</sub>[log P(y<sub>k</sub>, x<sub>k</sub> | ψ, ϕ)]</pre>
-    <p>
-        The integration of the particle filter within the E-step allows for efficient handling of nonlinear and non-Gaussian dynamics, which are common in neural data.
-    </p>
-    <p>
-        This EM-based approach ensures that both the latent states and the model parameters converge to values that best represent the data while respecting temporal dynamics. The particle filter facilitates robust inference by focusing computational resources on the most likely regions of the state space.
-    </p>
+<h3>M-Step (Maximization)</h3>
+<p>
+    The model parameters <i>ψ</i> (for state evolution) and <i>ϕ</i> (for the observation model) are updated by maximizing the expected joint likelihood of the latent states and observations, based on the posterior distribution estimated in the E-step:
+</p>
+<pre>arg max E<sub>P(x<sub>k</sub> | y<sub>k</sub>)</sub>[log P(y<sub>k</sub>, x<sub>k</sub> | ψ, ϕ)]</pre>
+<p>
+    The integration of the particle filter within the E-step allows for efficient handling of nonlinear and non-Gaussian dynamics, which are common in neural data.
+</p>
+<p>
+    This EM-based approach ensures that both the latent states and the model parameters converge to values that best represent the data while respecting temporal dynamics. The particle filter facilitates robust inference by focusing computational resources on the most likely regions of the state space.
+</p>
 
-    <h2>Decoding</h2>
-    <p>
-        The decoding process utilizes the inferred manifold to predict task-specific labels, such as "Life" or "Death" categorizations. The framework incorporates a supervised learning approach, integrating the inferred latent states with a 1D Convolutional Neural Network (1D CNN) to map the latent trajectory <i>X<sub>0</sub> … X<sub>k</sub></i> to labels.
-    </p>
-    <h3>Key Features of the Decoding Process</h3>
-    <ul>
-        <li>
-            <strong>Label Prediction Model:</strong>
-            The 1D CNN is trained to classify the trajectory of latent states into task-specific categories, optimizing for cross-entropy loss to maximize classification accuracy.
-        </li>
-        <li>
-            <strong>Joint Inference and Decoding:</strong>
-            The EM algorithm ensures that decoding benefits directly from the inferred manifold, as both steps are integrated into a unified framework.
-        </li>
-    </ul>
-    <p>
-        By combining the EM algorithm for parameter optimization, the particle filter for robust manifold inference, and the 1D CNN for decoding, the proposed framework achieves high precision in label prediction. This approach provides a powerful tool for modeling and understanding cognitive processes captured in EEG data.
-    </p>
-</section>
-
+<h2>Decoding</h2>
+<p>
+    The decoding process utilizes the inferred manifold to predict task-specific labels, such as "Life" or "Death" categorizations. The framework incorporates a supervised learning approach, integrating the inferred latent states with a 1D Convolutional Neural Network (1D CNN) to map the latent trajectory <i>X<sub>0</sub> … X<sub>k</sub></i> to labels.
+</p>
+<h3>Key Features of the Decoding Process</h3>
+<ul>
+    <li>
+        <strong>Label Prediction Model:</strong>
+        The 1D CNN is trained to classify the trajectory of latent states into task-specific categories, optimizing for cross-entropy loss to maximize classification accuracy.
+    </li>
+    <li>
+        <strong>Joint Inference and Decoding:</strong>
+        The EM algorithm ensures that decoding benefits directly from the inferred manifold, as both steps are integrated into a unified framework.
+    </li>
+</ul>
+<p>
+    By combining the EM algorithm for parameter optimization, the particle filter for robust manifold inference, and the 1D CNN for decoding, the proposed framework achieves high precision in label prediction. This approach provides a powerful tool for modeling and understanding cognitive processes captured in EEG data.
+</p>
