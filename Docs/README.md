@@ -94,24 +94,23 @@
     This EM-based approach ensures that both the latent states and the model parameters converge to values that best represent the data while respecting temporal dynamics. The particle filter facilitates robust inference by focusing computational resources on the most likely regions of the state space.
 </p>
 
-<h1>More Information on the EM Algorithm</h1>
-    <p>More information can be found in these books:</p>
-    <ul>
-        <li>
-            <strong>The EM Algorithm and Extensions (2nd Edition)</strong><br>
-            Authors: Geoffrey J. McLachlan and Thriyambakam Krishnan<br>
-            Publisher: Wiley-Interscience<br>
-            ISBN: 978-0471201700<br>
-            Description: This book offers a detailed account of the theory, methodology, and applications of the EM algorithm. It covers a wide range of topics, including regression, factor analysis, variance components estimation, and survival analysis. 
-            <a href="https://www.amazon.com/EM-Algorithm-Extensions-Geoffrey-McLachlan/dp/0471201707" target="_blank">Buy on Amazon</a>
-        </li>
-        <li>
-            <strong>The Expectation-Maximization Algorithm: A Short Tutorial</strong><br>
-            Author: Sean Borman<br>
-            Description: This concise tutorial provides a self-contained derivation of the EM algorithm, making it accessible for those new to the topic. It is an excellent starting point for understanding the algorithm's principles.
-            <a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm" target="_blank">Read More</a>
-        </li>
-    </ul>
+<p>More information can be found in these books:</p>
+<ul>
+    <li>
+        <strong>The EM Algorithm and Extensions (2nd Edition)</strong><br>
+        Authors: Geoffrey J. McLachlan and Thriyambakam Krishnan<br>
+        Publisher: Wiley-Interscience<br>
+        ISBN: 978-0471201700<br>
+        Description: This book offers a detailed account of the theory, methodology, and applications of the EM algorithm. It covers a wide range of topics, including regression, factor analysis, variance components estimation, and survival analysis. 
+        <a href="https://www.amazon.com/EM-Algorithm-Extensions-Geoffrey-McLachlan/dp/0471201707" target="_blank">Available here.</a>
+    </li>
+    <li>
+        <strong>The Expectation-Maximization Algorithm: A Short Tutorial</strong><br>
+        Author: Sean Borman<br>
+        Description: This concise tutorial provides a self-contained derivation of the EM algorithm, making it accessible for those new to the topic. It is an excellent starting point for understanding the algorithm's principles.
+        <a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm" target="_blank">Read More</a>
+    </li>
+</ul>
 
 <h2>Decoding</h2>
 <p>
