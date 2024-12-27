@@ -1,5 +1,5 @@
 <h1>LCDM: Latent Cognitive Dynamical Model</h1>
-<img src="Img/Picture.png" alt="LCDM Picture" height="150" width="600">
+<img src="Img/Picture.png" alt="LCDM Picture" height="120" width="600">
 <p>
     Welcome to the <strong>LCDM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
     specifically designed for analyzing high-dimensional EEG data collected during a word categorization task. The framework combines
