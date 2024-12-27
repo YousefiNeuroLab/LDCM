@@ -43,6 +43,23 @@
 <p>
     Here, v<sub>k</sub> ~ N(0, Q) represents Gaussian noise, and Y<sub>k</sub> ∈ R<sup>N</sup> is the N-dimensional neural observation. The nonlinear function g<sub>ϕ</sub>(.), parameterized by ϕ, maps the latent state to the observed data.
 </p>
+<p>More information can be found in these books:</p>
+    <ul>
+        <li>
+            <strong>Time Series Analysis by State Space Methods (2nd Edition)</strong><br>
+            Authors: James Durbin and Siem Jan Koopman<br>
+            Publisher: Oxford University Press<br>
+            ISBN: 978-0199641178<br>
+            Description: This book provides a comprehensive treatment of state-space methods for time series analysis, including both theory and applications. It covers linear Gaussian state-space models and extends to nonlinear and non-Gaussian cases, offering practical guidance for implementation. <a href="https://www.amazon.com/Time-Analysis-State-Space-Methods/dp/019964117X" target="_blank">Available here.</a>
+        </li>
+        <li>
+            <strong>State-Space Models with Regime Switching: Classical and Gibbs-Sampling Approaches with Applications</strong><br>
+            Authors: Chang-Jin Kim and Charles R. Nelson<br>
+            Publisher: The MIT Press<br>
+            ISBN: 978-0262535502<br>
+            Description: This book presents advanced econometric methods for estimating models that combine state-space and regime-switching features. It discusses both classical and Bayesian approaches, with applications in macroeconomics and finance. <a href="https://www.amazon.com/State-Space-Models-Regime-Switching-Gibbs-Sampling/dp/0262535505" target="_blank">Available here.</a>
+        </li>
+    </ul>
 
 <h4>Label Prediction</h4>
 <p>
