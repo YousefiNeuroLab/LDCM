@@ -38,7 +38,7 @@ pip install -r requirements.txt</code></pre>
 
 <h2>Documentation</h2>
 <p>
-    Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="docs/">docs</a> directory.
+    Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
 
 <h2>Examples</h2>
