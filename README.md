@@ -1,5 +1,5 @@
 <h1>Latent-state Dynamical Coherence Model (LDCM).</h1>
-<img src="Img/Picture.png" alt="LCDM Picture" height="120" width="600">
+<img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="120" width="600">
 <p>
     Welcome to the <strong>LCDM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
     specifically designed for analyzing high-dimensional EEG data collected during a word categorization task. The framework combines
