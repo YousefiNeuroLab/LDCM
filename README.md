@@ -24,18 +24,27 @@ pip install -r requirements.txt</code></pre>
 
 <h2>Usage</h2>
 <h3>Example: Word Categorization Task</h3>
-<ol>
-    <li><strong>Prepare Your Data:</strong> Format your EEG data as multi-channel time series. Ensure that it is compatible with the input requirements of the model.</li>
-    <li><strong>Run the LCDM Model:</strong> Execute the <code>main.py</code> script to infer the latent states and decode task-specific labels:
-        <pre><code>python main.py --data_path ./data/eeg_dataset.csv --output_dir ./results</code></pre>
+<p>
+    We validate our approach using behavioral data recorded during an 
+    <em>Implicit Association Test</em> (IAT), where participants classify labels (e.g., MDD vs. CTRL). 
+    Our results demonstrate that the framework achieves superior accuracy, sensitivity, and specificity 
+    compared to existing methods. This contribution addresses the critical need for approaches that 
+    balance interpretability with predictive power, making our framework particularly valuable for 
+    analyzing biological and neural data.
+</p>
+<p>Now, you can explore the following code sections to see the framework in action:</p>
+<ul>
+    <li>
+        <strong>Word Categorization Task</strong>: Demonstrates how to apply the LCDM framework to EEG data 
+        and visualize the inferred latent manifold.
     </li>
-    <li><strong>Visualize Results:</strong> Use the provided utilities to analyze and visualize the inferred manifold and decoding performance:
-        <pre><code>python visualize.py --results_dir ./results</code></pre>
+    <li>
+        <strong>Latent State Inference</strong>: Showcases the particle filter and EM algorithm in action.
     </li>
-    <li><strong>Run on Google Colab:</strong> Use the pre-configured notebook for an interactive experience:
-        <a href="https://colab.research.google.com/github/&lt;your-username&gt;/lcdm/blob/main/examples/lcdm_colab.ipynb" target="_blank">Run on Colab</a>
+    <li>
+        <strong>Performance Metrics</strong>: Evaluates model performance using accuracy, ROC curves, and AUC.
     </li>
-</ol>
+</ul>
 
 <h2>Documentation</h2>
 <p>
