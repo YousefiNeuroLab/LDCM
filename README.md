@@ -61,8 +61,7 @@ pip install -r requirements.txt</code></pre>
 <p>Now, you can explore the following code sections to see the framework in action:</p>
 <ul>
     <li>
-        <a href="Word Categorization Task">Word Categorization Task</a>: Demonstrates how to apply the LCDM framework to EEG data 
-        and visualize the inferred latent manifold.
+        <a href="Neural_Network_for_Classification_Task.py">Neural Network for Classification Task</a>: Demonstrates how to implement and train a neural network for EEG data classification and visualize its performance.
     </li>
     <li>
         <a href="LatentStateInference.py">Latent State Inference</a>: Showcases the particle filter and EM algorithm in action.
