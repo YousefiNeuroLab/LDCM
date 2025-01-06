@@ -1,113 +1,183 @@
+# Class to store all state parameters
+class State:
+    def __init__(self, dim_state, dim_obs, mode, R, R0, n_steps):
+        """
+        Initialize the State object with simulation parameters.
 
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-import math
+        Parameters:
+        dim_state (int): Dimension of the state space.
+        dim_obs (int): Dimension of the observation space.
+        mode (int): Simulation mode (1: Random walk, 2: Generalized).
+        R (float or array): Observation noise covariance.
+        R0 (float or array): Initial state covariance.
+        n_steps (int): Number of time steps in the simulation.
+        """
+        self.dim_state = dim_state
+        self.dim_obs = dim_obs
+        self.mode = mode
 
-def compute_half_sums(data, half_size):
+        # Initialize simulation parameters
+        self.x_init, self.mean, self.chol_cov_matrix, self.A, self.B, self.C, self.D, self.eigenvalue, \
+        self.eigenvectors, self.cov_matrix, self.w, self.Q = self.create_simulation_params()
+
+        self.R = R
+        self.R0 = R0
+        self.n_steps = n_steps
+
+    def create_simulation_params(self):
+        """
+        Generate and initialize simulation parameters such as covariance matrices,
+        eigenvalues, eigenvectors, and transition matrices.
+
+        Returns:
+        Tuple containing initialized parameters for simulation.
+        """
+        x_init = np.random.normal(loc=0, scale=2, size=self.dim_state)  # Initial value of x
+        mean = np.zeros(self.dim_obs)  # Mean vector
+
+        # Generate covariance matrix with low correlations
+        cov_matrix = generate_low_correlation_cov_matrix(self.dim_obs, (1, 2), (-0.1, 0.1))
+        Q = cov_matrix[0] if self.dim_obs == 1 else cov_matrix
+
+        # Cholesky decomposition and eigenvalue decomposition
+        chol_cov_matrix = np.linalg.cholesky(cov_matrix)
+        eigenvalues, eigenvectors = np.linalg.eigh(cov_matrix)
+
+        eigenvalue = np.diag(eigenvalues)
+        Lambda_inv_sqrt = np.diag(1.0 / np.sqrt(np.diag(eigenvalue)))
+        w = np.dot(eigenvectors, Lambda_inv_sqrt)
+
+        # Initialize observation matrices
+        C = np.array([[2]])
+        D = np.array([[-1]])
+
+        # Initialize transition matrices based on mode
+        if self.mode == 1:  # Random walk mode
+            A = np.eye(self.dim_state)
+            B = np.zeros(self.dim_state)
+        elif self.mode == 2:  # Generalized mode
+            A = np.random.normal(loc=0, scale=0.1, size=(self.dim_state, self.dim_state))
+            B = np.random.normal(loc=0, scale=0.1, size=self.dim_state)
+
+        return x_init, mean, chol_cov_matrix, A, B, C, D, eigenvalue, eigenvectors, cov_matrix, w, Q
+
+# Main simulation function
+def run_simulation(dim_state, dim_obs, mode, R, R0, n_steps, num_trials):
     """
-    Splits the data into two halves and computes the sum for each half along the first dimension.
+    Run the simulation for a specified number of trials and return generated data.
 
     Parameters:
-        data (numpy array): The input data of shape (n_steps, 2).
-        half_size (int): The size of each half.
+    dim_state (int): Dimension of the state space.
+    dim_obs (int): Dimension of the observation space.
+    mode (int): Simulation mode (1: Random walk, 2: Generalized).
+    R (float or array): Observation noise covariance.
+    R0 (float or array): Initial state covariance.
+    n_steps (int): Number of time steps in each trial.
+    num_trials (int): Number of trials to simulate.
 
     Returns:
-        tuple: (first_half_sum, second_half_sum) for the two halves.
+    Tuple containing state and observation data for all trials, labels, and the state object.
     """
-    first_half = data[:half_size]
-    second_half = data[half_size:]
+    state = State(dim_state, dim_obs, mode, R, R0, n_steps)
+    X_all_trials, Y_all_trials, labels = [], [], []
+    label_occurrences = {0: 0, 1: 0}
+    target_count = num_trials // 2
 
-    first_half_sum = np.sum(first_half, axis=0)
-    second_half_sum = np.sum(second_half, axis=0)
+    while not all(count >= target_count for count in label_occurrences.values()):
+        x, y = generate_simulation_data(state, n_steps - 1)
+        y = np.squeeze(y, axis=-1)
+        label = process_trials(np.array(y), num_trials, n_steps)
 
-    return first_half_sum, second_half_sum
+        if label_occurrences[label] < target_count:
+            if label == 0:
+                y += 20
 
-def classify_sums(first_half_sum, second_half_sum):
+            X_all_trials.append(x)
+            Y_all_trials.append(y)
+            labels.append(label)
+            label_occurrences[label] += 1
+
+    X_all_trials, Y_all_trials, labels = np.array(X_all_trials), np.array(Y_all_trials), np.array(labels)
+
+    visualize_simulation(Y_all_trials[0], dim_obs)
+    visualize_simulation(Y_all_trials[1], dim_obs)
+    visualize_x(X_all_trials[0], dim_state)
+
+    return X_all_trials, Y_all_trials, labels, state
+
+# Function to generate simulation data
+def generate_simulation_data(state: State, n_steps=99):
     """
-    Classifies the sums based on the given conditions and returns the label.
+    Generate simulation data for a single trial.
 
     Parameters:
-        first_half_sum (numpy array): Sum of the first half.
-        second_half_sum (numpy array): Sum of the second half.
+    state (State): The state object containing simulation parameters.
+    n_steps (int): Number of time steps to simulate.
 
     Returns:
-        int: Classification label (0 or 1).
+    Tuple containing state and observation data for the trial.
     """
-    if first_half_sum[0] < second_half_sum[0]:
-        return 0
-    else:
-        return 1
+    x, y = [], []
+    e = mvnrand(0, state.R, state.dim_state)
+    v = mvnrand(0, state.Q, state.dim_obs)
 
-def process_trials(x, num_trials, n_steps):
+    x_temp = state.A @ state.x_init.T + state.B + e
+    x.append(x_temp)
+    y_temp = state.C @ state.x_init + state.D + v[0]
+    y.append(np.array(y_temp))
+
+    for i in range(n_steps):
+        e = mvnrand(0, state.R, state.dim_state)
+        v = mvnrand(0, state.Q, state.dim_obs)
+        x_temp = state.A @ x[i].T + state.B + e
+        x.append(x_temp)
+        y_temp = state.C @ x[i] + state.D + v[0]
+        y.append(np.array(y_temp))
+
+    return x, y
+
+# Module: visualize
+def visualize_simulation(y, n):
     """
-    Processes multiple trials, computes half sums, and classifies them.
+    Visualize the elements of the observation vector over time.
 
     Parameters:
-        x (numpy array): Input data of shape (num_trials, n_steps, 2).
-        num_trials (int): Number of trials to process.
-        n_steps (int): Number of steps in each trial.
+    y (list): Observation data for the trial.
+    n (int): Number of observation dimensions to visualize.
 
     Returns:
-        int: Classification label for the processed trial.
+    None
     """
-    half_size = n_steps // 2
+    for i in range(n):
+        element_data = [item[i] for item in y]
+        plt.figure(figsize=(10, 6))
+        plt.plot(element_data, marker='o', linestyle='-', label=f'Element {i+1}')
+        plt.title(f"Observation Dimension {i+1} Over Time")
+        plt.xlabel("Iteration")
+        plt.ylabel(f"Dimension {i+1} Value")
+        plt.grid(True)
+        plt.legend()
+        plt.show()
 
-    # Compute sums and classify the trial
-    first_half_sum, second_half_sum = compute_half_sums(x, half_size)
-    print("first_half_sum", first_half_sum)
-    print("second_half_sum", second_half_sum)
-    label = classify_sums(first_half_sum, second_half_sum)
-
-    return label
-
-def generate_low_correlation_cov_matrix(M, var_range=(1, 2), corr_range=(-0.1, 0.1)):
+# Module: visualize_x
+def visualize_x(x, n):
     """
-    Generates an MxM covariance matrix with low correlations across nodes.
+    Visualize the state dimensions over time.
 
     Parameters:
-        M (int): Size of the covariance matrix (MxM).
-        var_range (tuple): Range for variances (diagonal elements).
-        corr_range (tuple): Range for low correlations (off-diagonal elements).
+    x (list): State data for the trial.
+    n (int): Number of state dimensions to visualize.
 
     Returns:
-        np.ndarray: Generated covariance matrix.
+    None
     """
-    # Step 1: Generate variances (diagonal elements)
-    variances = np.random.uniform(var_range[0], var_range[1], size=M)
+    for i in range(n):
+        plt.figure(figsize=(10, 6))
+        plt.plot([state[i] for state in x], marker='o', linestyle='-', label=f'State {i+1}', color=f'C{i}')
+        plt.title(f"State Dimension {i+1} Over Time")
+        plt.xlabel("Iteration")
+        plt.ylabel(f"State {i+1} Value")
+        plt.grid(True)
+        plt.legend()
+        plt.show()
 
-    # Step 2: Generate a matrix with random low correlations (off-diagonal)
-    low_corr_matrix = np.random.uniform(corr_range[0], corr_range[1], size=(M, M))
-
-    # Step 3: Make the matrix symmetric
-    low_corr_matrix = (low_corr_matrix + low_corr_matrix.T) / 2
-
-    # Step 4: Set the diagonal elements to the variances
-    np.fill_diagonal(low_corr_matrix, variances)
-
-    # Visualize the covariance matrix
-    sns.heatmap(low_corr_matrix, annot=True, cmap="coolwarm", fmt=".2f")
-    plt.title(f"Covariance Matrix with Low Correlations (Size: {M}x{M})")
-    plt.show()
-    return low_corr_matrix
-
-def mvnrand(mean, covariance_matrix, dim, n=1):
-    """
-    Generate random samples from a multivariate normal distribution.
-
-    Parameters:
-        mean (array-like or scalar): Mean vector. If scalar, it is expanded into a vector of zeros.
-        covariance_matrix (array-like or scalar): Covariance matrix (R).
-        dim (int): Dimension of the data.
-        n (int): Number of samples to generate. Default is 1.
-
-    Returns:
-        np.ndarray: Random samples from the multivariate normal distribution.
-    """
-    if dim == 1:  # 1D case
-        mean = np.array([mean]) if np.isscalar(mean) else mean
-        samples = np.random.normal(mean, math.sqrt(covariance_matrix), size=n)
-    else:  # Multidimensional case
-        mean = np.zeros(len(covariance_matrix)) if np.isscalar(mean) and mean == 0 else mean
-        samples = np.random.multivariate_normal(mean, covariance_matrix, size=n)
-    return samples
