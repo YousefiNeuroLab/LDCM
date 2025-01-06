@@ -42,7 +42,7 @@ pip install -r requirements.txt</code></pre>
     Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
 
-<h2>Examples</h2>
+<h2>Example</h2>
 <ul>
     <li><a href="examples/word_categorization_task.ipynb"><strong>Word Categorization Task</strong></a>: Demonstrates how to apply LCDM to EEG data and visualize the inferred latent manifold.</li>
     <li><a href="examples/latent_state_inference.ipynb"><strong>Latent State Inference</strong></a>: Showcases the particle filter and EM algorithm in action.</li>
