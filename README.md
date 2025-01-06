@@ -44,7 +44,7 @@ pip install -r requirements.txt</code></pre>
     </li>
 </ol>
 
-<h2>Documentation</h2>
+<h2>Modeling approach and definition</h2>
 <p>
     Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
