@@ -49,9 +49,6 @@ Go to the original repository and open a pull request. Include a detailed descri
 
 ## Guidelines
 
-### Code of Conduct
-This project adheres to the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to maintain a respectful and inclusive environment.
-
 ### Coding Standards
 - Follow the [style guide](STYLE_GUIDE.md) for consistent formatting.
 - Write clear and concise comments in your code.
