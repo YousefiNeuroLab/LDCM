@@ -68,7 +68,7 @@ pip install -r requirements.txt</code></pre>
         <a href="Latent State Inference">Latent State Inference</a>: Showcases the particle filter and EM algorithm in action.
     </li>
     <li>
-        <a href="Performance Metrics">Performance Metrics</a>: Evaluates model performance using accuracy, ROC curves, and AUC.
+        <a href="PerformanceMetrics.py">Performance Metrics</a>: Evaluates model performance using accuracy, ROC curves, and AUC.
     </li>
 </ul>
 
