@@ -129,3 +129,7 @@ def evaluate_model_roc_curve_multi_particle(model, loader, criterion=None):
 
     # If no criterion was used, return only the AUC score
     return auc_score
+test_accuracy = evaluate_model(model_temp, test_loader)
+print(f"Test accuracy: {test_accuracy:.4f}")
+auc = evaluate_model_roc_curve_multi_particle(model_roc, data_loader)  # Use model_eval
+print(f"Validation AUC: {auc:.4f}")
