@@ -23,6 +23,32 @@ cd lcdm
 pip install -r requirements.txt</code></pre>
 
 <h2>Usage</h2>
+<ol>
+    <li>
+        <strong>Prepare Your Data:</strong> Format your EEG data as multi-channel time series. Ensure that it is 
+        compatible with the input requirements of the model.
+    </li>
+    <li>
+        <strong>Run the LCDM Model:</strong> Execute the <code>main.py</code> script to infer the latent states 
+        and decode task-specific labels:
+        <pre><code>python main.py --data_path ./data/eeg_dataset.csv --output_dir ./results</code></pre>
+    </li>
+    <li>
+        <strong>Visualize Results:</strong> Use the provided utilities to analyze and visualize the inferred manifold 
+        and decoding performance:
+        <pre><code>python visualize.py --results_dir ./results</code></pre>
+    </li>
+    <li>
+        <strong>Run on Google Colab:</strong> Use the pre-configured notebook for an interactive experience: 
+        <a href="https://colab.research.google.com" target="_blank">Run on Colab</a>
+    </li>
+</ol>
+
+<h2>Documentation</h2>
+<p>
+    Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
+</p>
+
 <h3>Example: Word Categorization Task</h3>
 <p>
     We validate our approach using behavioral data recorded during an 
@@ -44,18 +70,6 @@ pip install -r requirements.txt</code></pre>
     <li>
         <strong>Performance Metrics</strong>: Evaluates model performance using accuracy, ROC curves, and AUC.
     </li>
-</ul>
-
-<h2>Documentation</h2>
-<p>
-    Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
-</p>
-
-<h2>Example</h2>
-<ul>
-    <li><a href="examples/word_categorization_task.ipynb"><strong>Word Categorization Task</strong></a>: Demonstrates how to apply LCDM to EEG data and visualize the inferred latent manifold.</li>
-    <li><a href="examples/latent_state_inference.ipynb"><strong>Latent State Inference</strong></a>: Showcases the particle filter and EM algorithm in action.</li>
-    <li><a href="examples/performance_metrics.ipynb"><strong>Performance Metrics</strong></a>: Evaluates model performance using accuracy, ROC curves, and AUC.</li>
 </ul>
 
 <h2>Citation</h2>
