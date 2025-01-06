@@ -1,7 +1,7 @@
 <h1>Latent-state Dynamical Coherence Model (LDCM).</h1>
 <img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
 <p>
-    Welcome to the <strong>LCDM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
+    Welcome to the <strong>LDCM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
     specifically designed for analyzing high-dimensional EEG data collected during a word categorization task. The framework combines
     <strong>state-space models (SSM)</strong> with <strong>deep neural networks (DNN)</strong> to infer latent manifolds and predict task-specific labels
     in a unified and interpretable manner.
@@ -29,7 +29,7 @@ pip install -r requirements.txt</code></pre>
         compatible with the input requirements of the model.
     </li>
     <li>
-        <strong>Run the LCDM Model:</strong> Execute the <code>main.py</code> script to infer the latent states 
+        <strong>Run the LDCM Model:</strong> Execute the <code>main.py</code> script to infer the latent states 
         and decode task-specific labels:
         <pre><code>python main.py --data_path ./data/eeg_dataset.csv --output_dir ./results</code></pre>
     </li>
@@ -46,7 +46,7 @@ pip install -r requirements.txt</code></pre>
 
 <h2>Modeling approach and definition</h2>
 <p>
-    Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
+    Comprehensive documentation for LDCM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
 
 <h2>Example: Brief death implicit association task (BDIT)</h2>
@@ -72,9 +72,9 @@ pip install -r requirements.txt</code></pre>
 </ul>
 
 <h2>Citation</h2>
-<p>If you use LCDM in your research, please cite us:</p>
-<pre><code>@article{lcdm2024,
-title={LCDM: Latent Cognitive Dynamical Model for EEG Analysis},
+<p>If you use LDCM in your research, please cite us:</p>
+<pre><code>@article{LDCM2024,
+title={LDCM: Latent Cognitive Dynamical Model for EEG Analysis},
 author={Your Name and Collaborators},
 journal={arXiv preprint arXiv:XXXX.XXXXX},
 year={2024}
