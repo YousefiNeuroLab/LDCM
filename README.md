@@ -49,7 +49,7 @@ pip install -r requirements.txt</code></pre>
     Comprehensive documentation for LCDM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
 
-<h2>Example: Word Categorization Task</h2>
+<h2>Example: Brief death implicit association task (BDIT)</h2>
 <p>
     We validate our approach using behavioral data recorded during an 
     <em>Implicit Association Test</em> (IAT), where participants classify labels (e.g., MDD vs. CTRL). 
