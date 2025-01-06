@@ -61,14 +61,14 @@ pip install -r requirements.txt</code></pre>
 <p>Now, you can explore the following code sections to see the framework in action:</p>
 <ul>
     <li>
-        <strong>Word Categorization Task</strong>: Demonstrates how to apply the LCDM framework to EEG data 
+        <strong><a href="Word Categorization Task">Word Categorization Task</a></strong>: Demonstrates how to apply the LCDM framework to EEG data 
         and visualize the inferred latent manifold.
     </li>
     <li>
-        <strong>Latent State Inference</strong>: Showcases the particle filter and EM algorithm in action.
+        <a href="Latent State Inference">Latent State Inference</a><strong>Latent State Inference</strong>: Showcases the particle filter and EM algorithm in action.
     </li>
     <li>
-        <strong>Performance Metrics</strong>: Evaluates model performance using accuracy, ROC curves, and AUC.
+        <a href="Performance Metrics">Performance Metrics</a>: Evaluates model performance using accuracy, ROC curves, and AUC.
     </li>
 </ul>
 
