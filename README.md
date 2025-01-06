@@ -1,4 +1,4 @@
-<h1>LCDM: Latent Cognitive Dynamical Model</h1>
+<h1>Latent-state Dynamical Coherence Model (LDCM).</h1>
 <img src="Img/Picture.png" alt="LCDM Picture" height="120" width="600">
 <p>
     Welcome to the <strong>LCDM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
