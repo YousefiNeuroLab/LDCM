@@ -50,7 +50,7 @@ Go to the original repository and open a pull request. Include a detailed descri
 ## Guidelines
 
 ### Coding Standards
-- Follow the [style guide](STYLE_GUIDE.md) for consistent formatting.
+- Follow the style guide for consistent formatting.
 - Write clear and concise comments in your code.
 - Use meaningful variable and function names.
 
