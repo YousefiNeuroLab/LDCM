@@ -5,13 +5,13 @@ Thank you for considering contributing to Latent-state Dynamical Coherence Model
 ## How to Contribute
 
 ### 1. Fork the Repository
-Start by forking the [repository](https://github.com/Pedram-Rajaei/LCDM) to your GitHub account.
+Start by forking the [repository](https://github.com/Pedram-Rajaei/LDCM) to your GitHub account.
 
 ### 2. Clone Your Fork
 Clone your fork to your local machine:
 
 ```bash
-git clone https://github.com/your-username/LCDM.git
+git clone https://github.com/your-username/LDCM.git
 ```
 
 ### 3. Create a Branch
