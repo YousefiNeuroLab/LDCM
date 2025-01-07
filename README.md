@@ -18,8 +18,8 @@
 
 <h2>Installation</h2>
 <p>Clone this repository and install the required dependencies:</p>
-<pre><code>git clone https://github.com/&lt;your-username&gt;/lcdm.git
-cd lcdm
+<pre><code>git clone https://github.com/&lt;your-username&gt;/ldCm.git
+cd ldCm
 pip install -r requirements.txt</code></pre>
 
 <h2>Usage</h2>
