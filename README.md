@@ -93,7 +93,7 @@ pip install -r requirements.txt</code></pre>
 <h4>Explore Code:</h4>
 <ul>
   <li>
-    <a href="https://colab.research.google.com/" target="_blank">
+    <a href="[https://colab.research.google.com](https://colab.research.google.com/drive/1-F3BZ0BUh1HzCy5zRQy911UAcI7O6T8q#scrollTo=sGYr5ho1iHdu)/" target="_blank">
       Colab Notebook for Hypothetical Observation Dataset
     </a>
   </li>
