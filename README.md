@@ -1,4 +1,4 @@
-<h1>Latent-state Dynamical Coherence Model (LDCM).</h1>
+<h1>Latent-state Dynamical Coherence Model (LDCM)</h1>
 <img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
 <p>
     Welcome to the <strong>LDCM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
