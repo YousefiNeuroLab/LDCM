@@ -1,4 +1,4 @@
-<h1>LCDM: Latent Cognitive Dynamical Model</h1>
+<h1>LDCM: Latent Cognitive Dynamical Model</h1>
 
 <h2>Motivation</h2>
 <p>
