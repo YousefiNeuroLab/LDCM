@@ -49,19 +49,20 @@ pip install -r requirements.txt</code></pre>
     Comprehensive documentation for LDCM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
 
-<h2>Example: Brief death implicit association task (BDIT)</h2>
+<h2>Examples</h2>
+
+<article id="example-1">
+<h3>I. Brief Death Implicit Association Task (BDIT)</h3>
 <p>
-    We validate our approach using behavioral data recorded during an 
-    <em>Implicit Association Test</em> (IAT), where participants classify labels (e.g., MDD vs. CTRL). 
-    Our results demonstrate that the framework achieves superior accuracy, sensitivity, and specificity 
-    compared to existing methods. This contribution addresses the critical need for approaches that 
-    balance interpretability with predictive power, making our framework particularly valuable for 
-    analyzing biological and neural data.
+  We validate our approach using behavioral data recorded during an Implicit Association Test (IAT),
+  where participants classify labels (e.g., MDD vs. CTRL). Our results demonstrate that the framework
+  achieves superior accuracy, sensitivity, and specificity compared to existing methods. This contribution
+  addresses the critical need for approaches that balance interpretability with predictive power, making our
+  framework particularly valuable for analyzing biological and neural data.
 </p>
-<p>Now, you can explore the following code sections to see the framework in action:</p>
+<h4>Explore Code:</h4>
 <ul>
-    <li>
-        <a href="Neural_Network_for_Classification_Task.py">Neural Network for Classification Task</a>: Demonstrates how to implement and train a neural network for EEG data classification and visualize its performance.
+    <li><a href="Neural_Network_for_Classification_Task.py">Neural Network for Classification Task</a>: Demonstrates how to implement and train a neural network for EEG data classification and visualize its performance.
     </li>
     <li>
         <a href="LatentStateInference.py">Latent State Inference</a>: Showcases the particle filter and EM algorithm in action.
@@ -70,6 +71,34 @@ pip install -r requirements.txt</code></pre>
         <a href="PerformanceMetrics.py">Performance Metrics</a>: Evaluates model performance using accuracy, ROC curves, and AUC.
     </li>
 </ul>
+</article>
+
+<article id="example-2">
+<h3>II. Hypothetical Observation Dataset Classification</h3>
+<p>
+  In this example, we create a hypothetical dataset with the following characteristics:
+</p>
+<ul>
+  <li><strong>Observation Dimension:</strong> 2</li>
+  <li><strong>Latent State Dimension:</strong> 2</li>
+  <li><strong>Trials:</strong> 400</li>
+  <li><strong>Time Steps per Trial:</strong> 25</li>
+</ul>
+<p>
+  We applied our framework using <strong>4000 particles</strong> to infer the classification results.
+  The 1D Convolutional Neural Network (CNN) used in this example consists of <strong>two convolutional layers</strong>
+  and is optimized with the <strong>ADAM optimizer</strong>. This example demonstrates how the model handles
+  time-series data in scenarios with predefined dimensionalities and trial structures.
+</p>
+<h4>Explore Code:</h4>
+<ul>
+  <li>
+    <a href="https://colab.research.google.com/" target="_blank">
+      Colab Notebook for Hypothetical Observation Dataset
+    </a>
+  </li>
+</ul>
+
 
 <h2>Citation</h2>
 <p>If you use LDCM in your research, please cite us:</p>
