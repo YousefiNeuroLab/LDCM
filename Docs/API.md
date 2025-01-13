@@ -1,4 +1,4 @@
-# Documentation for Repository
+# SSM-DNN API
 
 ## CNN1D
 
@@ -247,3 +247,192 @@ X_all_trials, Y_all_trials, state = run_simulation(
     n_steps=100,
     num_trials=5
 )
+
+# Particle Filter Functions
+
+## `particle_filter_multi_trial`
+Runs the particle filter algorithm for multiple trials to estimate latent states.
+
+### Parameters
+- `state` (*State*): State object containing system parameters.
+- `num_particles` (*int*): Number of particles to propagate.
+- `T` (*int*): Number of time steps per trial.
+- `y_all_trials` (*np.ndarray*): Observations for all trials.
+- `num_trials` (*int*): Number of trials to process.
+- `model` (*torch.nn.Module*): Neural network for refining particle weights.
+- `labels` (*list*): Labels for each trial.
+
+### Returns
+- *np.ndarray*: Array of particles across all trials after filtering.
+
+### Functionality
+- Runs particle filtering over multiple trials.
+- Calculates proposal probabilities, resamples particles, and refines weights with a neural network.
+
+---
+
+## `initialize_particles`
+Initializes particles randomly for a given state-space.
+
+### Parameters
+- `num_particles` (*int*): Number of particles.
+- `state_dim` (*int*): Dimensionality of each particle.
+- `R0` (*float or np.ndarray*): Initial covariance matrix.
+- `init_scale` (*float*): Scale for random initialization (default = 1).
+
+### Returns
+- *np.ndarray*: Initialized particles.
+
+---
+
+## `propagate_particles`
+Propagates particles using a random walk.
+
+### Parameters
+- `particles` (*np.ndarray*): Current particle states.
+- `R` (*float or np.ndarray*): Process noise covariance.
+- `dim_state` (*int*): State-space dimensionality.
+- `mean_q` (*np.ndarray*): Mean of the proposal distribution.
+- `sigma_q` (*np.ndarray*): Covariance of the proposal distribution.
+
+### Returns
+- *np.ndarray*: Propagated particles.
+
+---
+
+## `compute_weights`
+Computes particle weights based on observation likelihood.
+
+### Parameters
+- `particles` (*np.ndarray*): Array of particles.
+- `C` (*np.ndarray*): Observation matrix.
+- `D` (*np.ndarray*): Observation offset.
+- `y` (*np.ndarray*): Current observation.
+- `w` (*np.ndarray*): Whitening matrix.
+
+### Returns
+- *np.ndarray*: Normalized weights.
+
+---
+
+# EMAlgorithm Class
+
+## Description
+The `EMAlgorithm` class implements the Expectation-Maximization (EM) algorithm for parameter estimation in state-space models.
+
+---
+
+## Class: `EMAlgorithm`
+
+### `__init__`
+Initializes the EM algorithm with system parameters.
+
+#### Parameters
+- `Y` (*np.ndarray*): Observation data.
+- `label` (*np.ndarray*): Labels for each trial.
+- `dim_state` (*int*): State-space dimensionality.
+- `dim_obs` (*int*): Observation-space dimensionality.
+- `simulatiom_mode` (*int*): Simulation mode.
+- `update_params_mode` (*list*): Modes for updating [A, B, C, D, Q, R].
+- `R`, `R0` (*np.ndarray*): Noise covariance matrices.
+- `n_steps` (*int*): Number of time steps per trial.
+- `num_particles` (*int*): Number of particles.
+- `num_trials` (*int*): Number of trials.
+- `max_iter` (*int*): Maximum iterations for EM.
+
+---
+
+## Methods
+
+### `run_nn`
+Trains an initial neural network to classify observations.
+
+#### Functionality
+- Converts data to PyTorch tensors.
+- Splits data into training, validation, and test sets.
+- Trains a 1D CNN to classify trial labels.
+
+---
+
+### `run_em`
+Executes the EM algorithm to iteratively update parameters.
+
+#### Steps
+1. **E-step**: Estimates latent states using particle filtering.
+2. **M-step**: Updates model parameters to maximize likelihood.
+3. **NN-step**: Refines parameters using a neural network.
+
+---
+
+### `e_step`
+Estimates latent states via particle filtering.
+
+#### Returns
+- `all_particles` (*np.ndarray*): Estimated particles.
+- `mean_estimated_states` (*np.ndarray*): Mean of particle states.
+- `std_of_estimated_states` (*np.ndarray*): Standard deviations of states.
+
+---
+
+### `m_step`
+Updates model parameters.
+
+#### Functionality
+- Updates A, B, C, D, Q, and R matrices based on particle estimates and modes.
+
+---
+
+### `update_A_B`
+Updates the transition matrices (A and B).
+
+---
+
+### `update_C_D`
+Updates the observation matrices (C and D).
+
+---
+
+### `update_Q`
+Updates the process noise covariance (Q).
+
+---
+
+### `update_R`
+Updates the observation noise covariance (R).
+
+---
+
+### `full_likelihood`
+Computes the full log-likelihood of the observed data.
+
+---
+
+### `NN_step`
+Refines model predictions by training the neural network with updated particles.
+
+---
+
+## Example Workflow
+
+```python
+# Initialize EM algorithm
+em = EMAlgorithm(
+    Y=observations,
+    label=labels,
+    dim_state=1,
+    dim_obs=1,
+    simulatiom_mode=1,
+    update_params_mode=[1, 2, 2, 1],
+    R=np.array([1]),
+    R0=np.array([1]),
+    n_steps=360,
+    num_particles=500,
+    num_trials=23,
+    max_iter=10,
+)
+
+# Train initial neural network
+em.run_nn()
+
+# Run the EM algorithm
+em.run_em()
