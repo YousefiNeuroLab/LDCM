@@ -76,12 +76,6 @@ For full references, please refer to the [documentation](Documentation.pdf).
 
 ---
 
-## Repository Link
-Details of the implementation and training process are available on GitHub:  
-[SSM-DNN GitHub Repository](https://github.com/Pedram-Rajaei/LDCM)
-
----
-
 ## Contact
 For further information, please contact:
 - Pedram Rajaei: prajaei@CougarNet.uh.edu
