@@ -1,10 +1,27 @@
 <h1>Latent-state Dynamical Coherence Model (LDCM)</h1>
 <img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
 <p>
-    Welcome to the <strong>LDCM</strong> repository! This project introduces a novel framework for manifold inference and neural decoding,
-    specifically designed for analyzing high-dimensional EEG data collected during a word categorization task. The framework combines
-    <strong>state-space models (SSM)</strong> with <strong>deep neural networks (DNN)</strong> to infer latent manifolds and predict task-specific labels
-    in a unified and interpretable manner.
+    This will be the repository for LDCM project. The material in this repository 
+    are based on a current research which combines SSM and DNN for 
+    decoding high dimensional neural data. We designed the content of this 
+    repository aligned with what we thought it will be for LDCM project. Part of 
+    our previous effort on LDCM such as SS-GCoh model and preliminary 
+    results on the ansesthesia data can be found in our previous GitHub 
+    repostiry developed for this research: XXXXXXX
+</p>
+<p>
+    WThis project introduces a novel 
+    framework for manifold inference and neural decoding solution, specifically 
+    designed for analysis of high-dimensional data 
+    collected during cognitive tasks. In this 
+    framework, we combines <strong>state-space models 
+    (SSM)</strong> with <strong>deep neural networks (DNN)</strong>, in our effort to characterize 
+    high dimensional data, and also infer latent dynamical manifolds, which 
+    capture essential dynamics present in data and associated condition or 
+    label. For the application, we show the whole modeling pipeline in a 
+    Impliciti Assiciation Task which is called brief death IAT, recorded in our 
+    research group under approved IRB. Details of this task can be found here: 
+    put a explanation of the task in a file on GitHub.
 </p>
 
 <h2>Key Features</h2>
