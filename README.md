@@ -10,7 +10,7 @@
     repostiry developed for this research: XXXXXXX
 </p>
 <p>
-    WThis project introduces a novel 
+    This project introduces a novel 
     framework for manifold inference and neural decoding solution, specifically 
     designed for analysis of high-dimensional data 
     collected during cognitive tasks. In this 
@@ -25,12 +25,26 @@
 </p>
 
 <h2>Key Features</h2>
+<p>Development of SSM-DNN involves development of multiple modeling 
+techinques which include:</p>
 <ul>
-    <li><strong>State-Space Modeling with Particle Filters</strong>: Efficient inference of latent states using particle filters to capture the dynamics of high-dimensional neural data.</li>
-    <li><strong>Generative-Discriminative Integration</strong>: Combines a generative state evolution model with a discriminative neural network for supervised label prediction.</li>
-    <li><strong>1D Convolutional Neural Network (1D CNN)</strong>: Utilizes a 1D CNN to decode latent states into task-specific labels with high precision.</li>
-    <li><strong>Expectation-Maximization (EM) Optimization</strong>: Iteratively refines latent states and model parameters for robust manifold inference and label prediction.</li>
-    <li><strong>Designed for Cognitive Neuroscience</strong>: Evaluated on EEG data from a word categorization task, distinguishing "Life" vs. "Death" categorizations in participants with and without Major Depressive Disorder (MDD).</li>
+    <li><strong>MCMC sampling technique ( Particle Filters) for SSM-DNN model:</strong>: Efficient inference solution of latent states, which turns into  particle filters solution deriving an approximate posterior distribution of state given neural data and 
+associated labels.</li>
+    <li><strong>Data Generation Pipeline</strong>: Generative nature of SSM-DNN model which emerges from its SSM 
+element lets us to draw samples (trajectories) of the high dimensional 
+data and corresponding labels or categories.</li>
+    <li><strong>Flexible DNN Topologies Embedded in SSM-DNN</strong>: The SSM-DNN training and 
+inference are agnpsitc to the DNN topology and structure; thus, we 
+demonstrate how model can be applied to Multi_Perceptron Nueral 
+Networ, CNN with 1-D input and also CNN with mutivaraiate time 
+series.</li>
+    <li><strong>Verstatile Learning Solution</strong>: Expectation-Maximization (EM) 
+based training solution combined with sampling technique and 
+stochastic gradient techinques are built for the SSM and DNN model 
+training</li>
+    <li><strong>Flexibility in Analysis of Different Modalities of Data</strong>:The framework can be applied to different modalities of data 
+beyond neural data, and it can process behavuoral time-series data or 
+mixture of bibehaviroal signals.</li>
 </ul>
 
 <h2>Installation</h2>
