@@ -42,7 +42,7 @@ series.</li>
 based training solution combined with sampling technique and 
 stochastic gradient techinques are built for the SSM and DNN model 
 training</li>
-    <li><strong>Flexibility in Analysis of Different Modalities of Data</strong>:The framework can be applied to different modalities of data 
+    <li><strong>Flexibility in Analysis of Different Modalities of Data</strong>: The framework can be applied to different modalities of data 
 beyond neural data, and it can process behavuoral time-series data or 
 mixture of bibehaviroal signals.</li>
 </ul>
