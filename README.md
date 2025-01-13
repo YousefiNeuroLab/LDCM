@@ -139,7 +139,7 @@ journal={arXiv preprint arXiv:XXXX.XXXXX},
 year={2024}
 }</code></pre>
 
-<h2>Contributing</h2>
+<h2>Collaboration and Contribution</h2>
 <p>We welcome contributions! Please see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines.</p>
 
 <h2>License</h2>
