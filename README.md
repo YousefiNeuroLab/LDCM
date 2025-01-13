@@ -104,9 +104,9 @@ pip install -r requirements.txt</code></pre>
 </article>
 
 <article id="example-2">
-<h3>II. Hypothetical Observation Dataset Classification</h3>
+<h3>II. Simulated Observation Dataset Classification</h3>
 <p>
-  In this example, we create a hypothetical dataset with the following characteristics:
+  In this example, we create a Simulated dataset with the following characteristics:
 </p>
 <ul>
   <li><strong>Observation Dimension:</strong> 2</li>
@@ -124,7 +124,7 @@ pip install -r requirements.txt</code></pre>
 <ul>
   <li>
     <a href="https://colab.research.google.com/drive/1-F3BZ0BUh1HzCy5zRQy911UAcI7O6T8q#scrollTo=sGYr5ho1iHdu/" target="_blank">
-      Colab Notebook for Hypothetical Observation Dataset
+      Colab Notebook for Simulated Observation Dataset
     </a>
   </li>
 </ul>
