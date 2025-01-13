@@ -5,8 +5,8 @@
     behavioral and cognitive differences between individuals with Major Depressive Disorder (MDD) 
     and healthy controls (CTL). The data collection was conducted under IRB approval 
     (<em>Advarra IRB, approved on 01/05/2024</em>). A total of 23 participants' data 
-    out of <code>XX</code> data was used in this research (remaining data were excluded as participants 
-    missed more than <code>XX</code> trials and their performance accuracy was below chance level), 
+    out of 26 data was used in this research (remaining data were excluded as participants 
+    missed more than 200 trials and their performance accuracy was below chance level), 
     including 11 individuals diagnosed with MDD and 12 healthy controls without any reported psychiatric conditions.
   </p>
   <p>
