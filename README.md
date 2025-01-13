@@ -150,6 +150,10 @@ year={2024}
 
 <h2>Acknowledgments</h2>
 <p>
-    This work is inspired by advancements in state-space modeling, deep learning, and neuroscience.
-    Special thanks to contributors and researchers in the field of cognitive neuroscience and computational modeling.
+    This work was partially supported by (add DARPA funding here). We 
+appreciate our research collaboratros from UMN, Intheon, and etc
+The work was also supported by start up fund from University of 
+Hosuton. Our special thanks go to our research collaborator and 
+colleague who contributed in provifing data and thoughtful comments 
+in revising our modeling framework.
 </p>
