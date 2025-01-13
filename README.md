@@ -36,7 +36,7 @@ data and corresponding labels or categories.</li>
     <li><strong>Flexible DNN Topologies Embedded in SSM-DNN</strong>: The SSM-DNN training and 
 inference are agnpsitc to the DNN topology and structure; thus, we 
 demonstrate how model can be applied to Multi_Perceptron Nueral 
-Networ, CNN with 1-D input and also CNN with mutivaraiate time 
+NetworK, CNN with 1-D input and also CNN with mutivaraiate time 
 series.</li>
     <li><strong>Verstatile Learning Solution</strong>: Expectation-Maximization (EM) 
 based training solution combined with sampling technique and 
