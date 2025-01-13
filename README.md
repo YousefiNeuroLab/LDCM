@@ -56,7 +56,7 @@ pip install -r requirements.txt</code></pre>
 <p>To use this toolkit, follow the step-by-step instructions provided below to set up, train, and evaluate the SSM-DNN model for your high-dimensional data analysis tasks.</p>
 <ol>
     <li>
-        <strong>Prepare Your Data:</strong> Format your EEG data as multi-channel time series. Ensure that it is 
+        <strong>Prepare Your Data:</strong> Format your data as multi-channel time series. Ensure that it is 
         compatible with the input requirements of the model.
     </li>
     <li>
