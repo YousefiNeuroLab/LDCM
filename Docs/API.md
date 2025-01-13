@@ -117,7 +117,7 @@ train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
 # Evaluate on test set
 test_accuracy = evaluate_model(model, test_loader)
 print(f"Test Accuracy: {test_accuracy:.4f}")
----
+```
 # State Class
 
 ## Description
@@ -247,7 +247,7 @@ X_all_trials, Y_all_trials, state = run_simulation(
     n_steps=100,
     num_trials=5
 )
-
+```
 # Particle Filter Functions
 
 ## `particle_filter_multi_trial`
