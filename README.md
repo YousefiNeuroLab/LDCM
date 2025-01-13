@@ -26,7 +26,7 @@
 
 <h2>Key Features</h2>
 <p>Development of SSM-DNN involves development of multiple modeling 
-techinques which include:</p>
+techniques which include:</p>
 <ul>
     <li><strong>MCMC sampling technique ( Particle Filters) for SSM-DNN model:</strong>: Efficient inference solution of latent states, which turns into  particle filters solution deriving an approximate posterior distribution of state given neural data and 
 associated labels.</li>
@@ -35,8 +35,7 @@ element lets us to draw samples (trajectories) of the high dimensional
 data and corresponding labels or categories.</li>
     <li><strong>Flexible DNN Topologies Embedded in SSM-DNN</strong>: The SSM-DNN training and 
 inference are agnpsitc to the DNN topology and structure; thus, we 
-demonstrate how model can be applied to Multi_Perceptron Nueral 
-NetworK, CNN with 1-D input and also CNN with mutivaraiate time 
+demonstrate how model can be applied to Multi-Layer Perceptron Neural Network, CNN with 1-D input and also CNN with mutivaraiate time 
 series.</li>
     <li><strong>Verstatile Learning Solution</strong>: Expectation-Maximization (EM) 
 based training solution combined with sampling technique and 
