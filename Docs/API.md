@@ -117,7 +117,7 @@ train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
 # Evaluate on test set
 test_accuracy = evaluate_model(model, test_loader)
 print(f"Test Accuracy: {test_accuracy:.4f}")
-
+---
 # State Class
 
 ## Description
