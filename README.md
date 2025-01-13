@@ -34,16 +34,16 @@ associated labels.</li>
 element lets us to draw samples (trajectories) of the high dimensional 
 data and corresponding labels or categories.</li>
     <li><strong>Flexible DNN Topologies Embedded in SSM-DNN</strong>: The SSM-DNN training and 
-inference are agnpsitc to the DNN topology and structure; thus, we 
-demonstrate how model can be applied to Multi-Layer Perceptron Neural Network, CNN with 1-D input and also CNN with mutivaraiate time 
+inference are agnostic to the DNN topology and structure; thus, we 
+demonstrate how model can be applied to Multi-Layer Perceptron Neural Network, CNN with 1-D input and also CNN with multivariate time 
 series.</li>
     <li><strong>Verstatile Learning Solution</strong>: Expectation-Maximization (EM) 
 based training solution combined with sampling technique and 
-stochastic gradient techinques are built for the SSM and DNN model 
+stochastic gradient techniques are built for the SSM and DNN model 
 training</li>
     <li><strong>Flexibility in Analysis of Different Modalities of Data</strong>: The framework can be applied to different modalities of data 
-beyond neural data, and it can process behavuoral time-series data or 
-mixture of bibehaviroal signals.</li>
+beyond neural data, and it can process behavioral time-series data or 
+mixture of behavioral signals.</li>
 </ul>
 
 <h2>Installation</h2>
