@@ -2,9 +2,9 @@
 <img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
 <p>
     This will be the repository for LDCM project. The material in this repository 
-    are based on a current research which combines SSM and DNN for 
+    is based on a current research which combines SSM and DNN for 
     decoding high dimensional neural data. We designed the content of this 
-    repository aligned with what we thought it will be for LDCM project. Part of 
+    repository aligned with what we thought it would be for LDCM project. Part of 
     our previous effort on LDCM such as SS-GCoh model and preliminary 
     results on the ansesthesia data can be found in our previous GitHub 
     repostiry developed for this research: XXXXXXX
