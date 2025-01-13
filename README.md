@@ -53,13 +53,14 @@ cd ldCm
 pip install -r requirements.txt</code></pre>
 
 <h2>Usage</h2>
+<p>To use this toolkit, follow the step-by-step instructions provided below to set up, train, and evaluate the SSM-DNN model for your high-dimensional data analysis tasks.</p>
 <ol>
     <li>
         <strong>Prepare Your Data:</strong> Format your EEG data as multi-channel time series. Ensure that it is 
         compatible with the input requirements of the model.
     </li>
     <li>
-        <strong>Run the LDCM Model:</strong> Execute the <code>main.py</code> script to infer the latent states 
+        <strong>Run the SSM-DNN Model:</strong> Execute the <code>main.py</code> script to infer the latent states 
         and decode task-specific labels:
         <pre><code>python main.py --data_path ./data/eeg_dataset.csv --output_dir ./results</code></pre>
     </li>
@@ -76,7 +77,7 @@ pip install -r requirements.txt</code></pre>
 
 <h2>Modeling approach and definition</h2>
 <p>
-    Comprehensive documentation for LDCM, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
+    Comprehensive documentation for SSM-DNN, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
 
 <h2>Examples</h2>
@@ -131,7 +132,7 @@ pip install -r requirements.txt</code></pre>
 
 
 <h2>Citation</h2>
-<p>If you use LDCM in your research, please cite us:</p>
+<p>If you use SSM-DNN in your research, please cite us:</p>
 <pre><code>@article{LDCM2024,
 title={LDCM: Latent Cognitive Dynamical Model for EEG Analysis},
 author={Your Name and Collaborators},
