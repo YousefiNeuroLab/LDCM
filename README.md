@@ -20,8 +20,7 @@
     capture essential dynamics present in data and associated condition or 
     label. For the application, we show the whole modeling pipeline in a 
     Implicit Association Task which is called brief death IAT, recorded in our 
-    research group under approved IRB. Details of this task can be found here: 
-    put an explanation of the task in a file on GitHub.
+    research group under approved IRB. Details of this task can be found here.
 </p>
 
 <h2>Key Features</h2>
