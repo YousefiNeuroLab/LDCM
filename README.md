@@ -7,7 +7,7 @@
     repository aligned with what we thought it would be for LDCM project. Part of 
     our previous effort on LDCM such as SS-GCoh model and preliminary 
     results on the anesthesia data can be found in our previous GitHub 
-    repository developed for this research: XXXXXXX
+    repository developed for this research: (https://github.com/YousefiNeuroLab/LDCM)
 </p>
 <p>
     This project introduces a novel 
