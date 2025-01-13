@@ -6,22 +6,22 @@
     decoding high dimensional neural data. We designed the content of this 
     repository aligned with what we thought it would be for LDCM project. Part of 
     our previous effort on LDCM such as SS-GCoh model and preliminary 
-    results on the ansesthesia data can be found in our previous GitHub 
-    repostiry developed for this research: XXXXXXX
+    results on the anesthesia data can be found in our previous GitHub 
+    repository developed for this research: XXXXXXX
 </p>
 <p>
     This project introduces a novel 
     framework for manifold inference and neural decoding solution, specifically 
     designed for analysis of high-dimensional data 
     collected during cognitive tasks. In this 
-    framework, we combines <strong>state-space models 
+    framework, we combine <strong>state-space models 
     (SSM)</strong> with <strong>deep neural networks (DNN)</strong>, in our effort to characterize 
     high dimensional data, and also infer latent dynamical manifolds, which 
     capture essential dynamics present in data and associated condition or 
     label. For the application, we show the whole modeling pipeline in a 
-    Impliciti Assiciation Task which is called brief death IAT, recorded in our 
+    Implicit Association Task which is called brief death IAT, recorded in our 
     research group under approved IRB. Details of this task can be found here: 
-    put a explanation of the task in a file on GitHub.
+    put an explanation of the task in a file on GitHub.
 </p>
 
 <h2>Key Features</h2>
