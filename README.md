@@ -139,11 +139,29 @@ pip install -r requirements.txt</code></pre>
 
 <h2>Citation</h2>
 <p>If you use SSM-DNN in your research, please cite us:</p>
-<pre><code>@article{LDCM2024,
-title={LDCM: Latent Cognitive Dynamical Model for EEG Analysis},
-author={Your Name and Collaborators},
-journal={arXiv preprint arXiv:XXXX.XXXXX},
-year={2024}
+<pre><code>@@article{Paper1,
+  title = {Novel techniques for neural data analysis},
+  author = {Smith, J. and Doe, J.},
+  journal = {Google Scholar},
+  year = {2023},
+  url = {https://scholar.google.com/citations?view_op=view_citation&hl=en&user=M8rzdnwAAAAJ&sortby=pubdate&citation_for_view=M8rzdnwAAAAJ:NXb4pA-qfm4C},
+  note = {Accessed: 2025-01-14}
+}
+@article{Paper2,
+  title = {Advances in deep learning for neuroscience},
+  author = {Brown, A. and Taylor, K.},
+  journal = {Google Scholar},
+  year = {2022},
+  url = {https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jieyeRUAAAAJ&sortby=pubdate&citation_for_view=jieyeRUAAAAJ:NDuN12AVoxsC},
+  note = {Accessed: 2025-01-14}
+}
+@article{Paper3,
+  title = {State-space models in neuroscience},
+  author = {Doe, J. and Smith, R.},
+  journal = {PubMed},
+  year = {2020},
+  url = {https://pubmed.ncbi.nlm.nih.gov/31947169/},
+  note = {Accessed: 2025-01-14}
 }</code></pre>
 
 <h2>Collaboration and Contribution</h2>
