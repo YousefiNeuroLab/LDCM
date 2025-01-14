@@ -80,9 +80,9 @@ pip install -r requirements.txt</code></pre>
 </p>
 <h2>Dataset Repository</h2>
 
-<p>You will find the dataset used in this research, along with datasets for upcoming work, on the <a href="(https://dandiarchive.org/)">DANDI archive</a>. The datasets shared on DANDI comply with NIH regulatory guidelines and have been approved by local Institutional Review Boards (IRBs). All datasets have been de-identified to ensure compliance with ethical considerations and HIPAA regulations.</p>
+<p>You will find the dataset used in this research, along with datasets for upcoming work, on the <a href="https://dandiarchive.org/ target="_blank">DANDI archive</a>. The datasets shared on DANDI comply with NIH regulatory guidelines and have been approved by local Institutional Review Boards (IRBs). All datasets have been de-identified to ensure compliance with ethical considerations and HIPAA regulations.</p>
 <ul>
-    <li><a href="[https://dandiarchive.org/dandiset/001285?pos=1]">EEG Anesthesia Dataset:</a> This dataset is being recorded as part of the research conducted in this study. It includes EEG data collected during anesthesia experiments to support the development and evaluation of the proposed models. The dataset adheres to ethical guidelines, with all necessary approvals obtained from relevant Institutional Review Boards (IRBs). The data is de-identified to ensure compliance with privacy standards and HIPAA regulations.</li>
+    <li><a href="https://dandiarchive.org/dandiset/001285?pos=1" target="_blank>EEG Anesthesia Dataset:</a> This dataset is being recorded as part of the research conducted in this study. It includes EEG data collected during anesthesia experiments to support the development and evaluation of the proposed models. The dataset adheres to ethical guidelines, with all necessary approvals obtained from relevant Institutional Review Boards (IRBs). The data is de-identified to ensure compliance with privacy standards and HIPAA regulations.</li>
 </ul>
     
 <h2>Examples</h2>
