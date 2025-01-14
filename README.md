@@ -1,6 +1,6 @@
 <h1>Latent-state Dynamical Coherence Model (LDCM)</h1>
 <img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
-<p>
+<p style="background-color: yellow; padding: 5px; border-radius: 3px;">
     This will be the repository for LDCM project. The material in this repository 
     is based on a current research which combines SSM and DNN for 
     decoding high dimensional neural data. We designed the content of this 
