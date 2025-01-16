@@ -101,10 +101,9 @@ assumption is as follows:
   <li><strong>Number of samples per trial:</strong> 25</li>
   <li><strong>Class labels:</strong> 2, Class A and class B</li>
 </ul>
-<p>The state equation is a multivariate normal followed by X_k+1 = A * X_k + 
-B+ e (we assume A to be an identity matrix and B is vector Zero, and 
+<p>The state equation is a multivariate normal followed by X<sub>k+1</sub> = A ⋅ X<sub>k</sub> + B + e (we assume A to be an identity matrix and B is vector Zero, and 
 epsilon is crrleated noise)</p>
-<p>The observation model is defined by Y_k = C X_k +D</p>
+<p>The observation model is defined by Y<sub>k</sub> = C ⋅ X<sub>k</sub> + D</p>
 <p>The label of class is defined by XXXXXXXX</p>
 <p>For DNN, we use a CNN with 2 inputs and 2 convolution layer
     <ul>
