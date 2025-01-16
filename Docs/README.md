@@ -47,8 +47,8 @@ The decoding process predicts the label probability per trial using state infere
 
 ---
 
-## [Data Description](https://github.com/YousefiNeuroLab/LDCM/blob/main/Data%20Description.md)
-The dataset includes behavioral data from an **Implicit Association Task (IAT)** designed to distinguish between individuals with Major Depressive Disorder (MDD) and healthy controls (CTL). Key details:
+## Data Description
+The [dataset](https://github.com/YousefiNeuroLab/LDCM/blob/main/Data%20Description.md) includes behavioral data from an **Implicit Association Task (IAT)** designed to distinguish between individuals with Major Depressive Disorder (MDD) and healthy controls (CTL). Key details:
 - **Participants:** 23 (11 MDD, 12 CTL).
 - **Task:** Matching stimulus words with categories ("Life + Me" or "Death + Me").
 - **Trials:** 360 trials per participant across 18 blocks.
