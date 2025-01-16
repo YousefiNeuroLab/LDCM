@@ -46,6 +46,11 @@ SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning t
 The model training involves:
 1. **E-step:** Posterior distribution estimation using MCMC.
 2. **M-step:** Updating parameters with stochastic gradient ascent.
+- <figure>
+    <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/Model-Structure.png" alt="LCDM Picture" height="300" width="360">
+    <figcaption><strong>Fig. 1. SMM-DNN Model Architecture</strong> The model combines SSM and DNN in characterization of high-dimensional neural recording and their labels.  represent a low dimensional representation of neural data, which is passed to a DNN for supervised learning tasks, enabling accurate label prediction and interpretation. This integration leverages the generative strengths of SSMs for capturing temporal dynamics while utilizing the discriminative capabilities of DNNs for classification and regression.
+    </figcaption>
+</figure>
 
 ### Decoding
 The decoding process predicts the label probability per trial using state inference derived from observed data.
