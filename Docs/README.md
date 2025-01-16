@@ -36,7 +36,11 @@ SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning t
 - A **latent variable** capturing essential dynamics from biobehavioral signals.
 - State and observation models represented mathematically.
 - Training via Expectation-Maximization (EM) combined with MCMC sampling for latent state inference.
-  <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/Model-Structure.png" alt="LCDM Picture" height="300" width="360">
+- <figure>
+    <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/Model-Structure.png" alt="LCDM Picture" height="300" width="360">
+    <figcaption><strong>Fig. 1. SMM-DNN Model Architecture</strong> The model combines SSM and DNN in characterization of high-dimensional neural recording and their labels.  represent a low dimensional representation of neural data, which is passed to a DNN for supervised learning tasks, enabling accurate label prediction and interpretation. This integration leverages the generative strengths of SSMs for capturing temporal dynamics while utilizing the discriminative capabilities of DNNs for classification and regression.
+    </figcaption>
+</figure>
 
 ### Training
 The model training involves:
