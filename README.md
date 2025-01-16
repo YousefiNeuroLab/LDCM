@@ -51,7 +51,7 @@ mixture of behavioral signals.</li>
 cd ldCm
 pip install -r requirements.txt</code></pre>
 
-<h2>How to Use</h2>
+<h2>How to Use SSN-DNN Package</h2>
 <p>To use this toolkit, follow the step-by-step instructions provided below to set up, train, and evaluate the SSM-DNN model for your high-dimensional data analysis tasks.</p>
 <ol>
     <li>
@@ -111,9 +111,9 @@ pip install -r requirements.txt</code></pre>
 </article>
 
 <article id="example-2">
-<h3>II. Simulated Observation Dataset Classification</h3>
+<h3>II. Simulated data Classification</h3>
 <p>
-  In this example, we create a Simulated dataset with the following characteristics:
+  In this example, we create a simulated dataset with the following characteristics:
 </p>
 <ul>
   <li><strong>Observation Dimension:</strong> 2</li>
