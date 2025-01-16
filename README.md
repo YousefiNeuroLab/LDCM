@@ -89,7 +89,7 @@ pip install -r requirements.txt</code></pre>
 <h2>Code Examples(Simulation and Read Data Applications)</h2>
 
 <article id="example-1">
-<h3>I. Brief Death Implicit Association Task (BDIT)</h3>
+<h3><a href="Data Description.md" target="_blank">I. Brief Death Implicit Association Task (BDIT)</a></h3>
 <p>
   We validate our approach using behavioral data recorded during an Implicit Association Test (IAT),
   where participants classify labels (e.g., MDD vs. CTRL). Our results demonstrate that the framework
