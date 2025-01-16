@@ -36,6 +36,7 @@ SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning t
 - A **latent variable** capturing essential dynamics from biobehavioral signals.
 - State and observation models represented mathematically.
 - Training via Expectation-Maximization (EM) combined with MCMC sampling for latent state inference.
+<img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
 
 ### Training
 The model training involves:
