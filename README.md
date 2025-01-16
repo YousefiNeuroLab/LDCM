@@ -174,7 +174,7 @@ pip install -r requirements.txt</code></pre>
 
 <h2>Acknowledgments</h2>
 <p>
-    This work was partially supported by (the Defense Advanced Research Projects Agency (DARPA) under cooperative agreement No. N660012324016. The content of the information does not necessarily reflect the position or the policy of the Government, and no official endorsement should be inferred.). We 
+    This work was partially supported by (the Defense Advanced Research Projects Agency (DARPA) under cooperative agreement # N660012324016. The content of the information does not necessarily reflect the position or the policy of the Government, and no official endorsement should be inferred.). We 
 appreciate our research collaboratros from UMN, Intheon, and etc
 The work was also supported by start up fund from University of 
 Hosuton. Our special thanks go to our research collaborator and 
