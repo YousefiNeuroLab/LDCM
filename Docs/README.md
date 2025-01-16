@@ -44,7 +44,7 @@ SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning t
 The model training involves:
 1. **E-step:** Posterior distribution estimation using MCMC.
 2. **M-step:** Updating parameters with stochastic gradient ascent.
-    <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/EM-algorithm.png" alt="EM" height="300" width="360">
+3. <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/EM-algorithm.png" alt="EM" height="300" width="360">
     <figcaption><strong>Expectation-Maximization (EM) Algorithm for Maximum Likelihood Estimation</strong>
 The graph illustrates how the EM algorithm converges to a local maximum by iteratively performing the E-step and M-step.
     </figcaption>
