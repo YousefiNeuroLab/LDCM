@@ -1,4 +1,4 @@
-# Contributing to Latent-state Dynamical Coherence Model (LDCM)
+# Contribution to the Development of the Latent-State Dynamic Connectivity Model (LDCM)
 
 Thank you for considering contributing to Latent-state Dynamical Coherence Model (LDCM)! We welcome contributions from everyone, whether you're fixing a bug, adding a new feature, or improving documentation. Please follow these guidelines to ensure a smooth contribution process.
 
