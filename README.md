@@ -104,7 +104,7 @@ assumption is as follows:
 <p>The state equation is a multivariate normal followed by X<sub>k+1</sub> = A ⋅ X<sub>k</sub> + B + e (we assume A to be an identity matrix and B is vector Zero, and 
 epsilon is crrleated noise)</p>
 <p>The observation model is defined by Y<sub>k</sub> = C ⋅ X<sub>k</sub> + D</p>
-<p>The label of class is defined by XXXXXXXX</p>
+<p>The label for each trial is determined based on the sum of its samples. If the sum of the first half of the samples in a trial is less than the sum of the second half, the label is 0; otherwise, the label is 1.</p>
 <p>For DNN, we use a CNN with 2 inputs and 2 convolution layer. The code of this application can be found here:
     <ul>
       <li><a href="https://colab.research.google.com" target="_blank">Data Generation Code</a></li>
