@@ -38,7 +38,7 @@ SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning t
 - Training via Expectation-Maximization (EM) combined with MCMC sampling for latent state inference.
 - <figure>
     <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/Model-Structure.png" alt="SSN-DNN" height="300" width="360">
-    <figcaption><strong>Fig. 1. SMM-DNN Model Architecture</strong> The model combines SSM and DNN in characterization of high-dimensional neural recording and their labels.  represent a low dimensional representation of neural data, which is passed to a DNN for supervised learning tasks, enabling accurate label prediction and interpretation. This integration leverages the generative strengths of SSMs for capturing temporal dynamics while utilizing the discriminative capabilities of DNNs for classification and regression.
+    <figcaption><strong>SMM-DNN Model Architecture</strong> The model combines SSM and DNN in characterization of high-dimensional neural recording and their labels.  represent a low dimensional representation of neural data, which is passed to a DNN for supervised learning tasks, enabling accurate label prediction and interpretation. This integration leverages the generative strengths of SSMs for capturing temporal dynamics while utilizing the discriminative capabilities of DNNs for classification and regression.
     </figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ The model training involves:
 2. **M-step:** Updating parameters with stochastic gradient ascent.
 - <figure>
     <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/EM-algorithm.png" alt="EM" height="300" width="360">
-    <figcaption><strong>Fig. 2. Convergance of the EM algorithm</strong>
+    <figcaption><strong>Convergance of the EM algorithm</strong>
     </figcaption>
 </figure>
 
