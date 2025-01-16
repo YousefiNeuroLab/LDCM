@@ -86,12 +86,12 @@ pip install -r requirements.txt</code></pre>
     <li><a href="https://dandiarchive.org/dandiset/001285?pos=1 target="_blank> EEG Anesthesia Dataset:</a> This dataset is being recorded as part of the research conducted in this study: <a href="https://www.pnas.org/doi/10.1073/pnas.1017041108">Tracking Brain States under General Anesthesia by Using Global Coherence Analysis</a>. It includes EEG data collected during anesthesia experiments to support the development and evaluation of the proposed models. The dataset adheres to ethical guidelines, with all necessary approvals obtained from relevant Institutional Review Boards (IRBs). The data is de-identified to ensure compliance with privacy standards and HIPAA regulations.</li>
 </ul>
     
-<h2>Code Examples(Simulation and Read Data Applications)</h2>
+<h2>Code Examples(Simulation and Real Data Applications)</h2>
 
 <article id="example-1">
-<h3><a href="Data Description.md" target="_blank">I. Brief Death Implicit Association Task (BDIT)</a></h3>
+<h3>I. Brief Death Implicit Association Task (BDIAT)</h3>
 <p>
-  We validate our approach using behavioral data recorded during an Implicit Association Test (IAT),
+  We validate our approach using behavioral data recorded during an <a href="Data Description.md" target="_blank">Implicit Association Test (IAT)</a>,
   where participants classify labels (e.g., MDD vs. CTRL). Our results demonstrate that the framework
   achieves superior accuracy, sensitivity, and specificity compared to existing methods. This contribution
   addresses the critical need for approaches that balance interpretability with predictive power, making our
