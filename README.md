@@ -107,10 +107,10 @@ epsilon is crrleated noise)</p>
 <p>The label of class is defined by XXXXXXXX</p>
 <p>For DNN, we use a CNN with 2 inputs and 2 convolution layer
     <ul>
-      <li>Data Generation Code</li>
-      <li>Model Training Code: We use MCMC method for the posterior 
+      <li><a href="https://colab.research.google.com" target="_blank">Data Generation Code</a></li>
+      <li><a href="https://colab.research.google.com" target="_blank">Model Training Code:</a> We use MCMC method for the posterior 
 estimation of the state (4000 particles) and EM algorithm for training</li>
-      <li>Decoding (Label Prediction) Code: We predict DNN probability of 
+      <li><a href="https://colab.research.google.com" target="_blank">Decoding (Label Prediction) Code:</a> We predict DNN probability of 
 Class A and Class B using 4000 partcile samples drawn from the satte 
 estimation</li>
     </ul>
