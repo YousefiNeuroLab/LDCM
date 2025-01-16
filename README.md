@@ -51,7 +51,7 @@ mixture of behavioral signals.</li>
 cd ldCm
 pip install -r requirements.txt</code></pre>
 
-<h2>Usage</h2>
+<h2>How to Use</h2>
 <p>To use this toolkit, follow the step-by-step instructions provided below to set up, train, and evaluate the SSM-DNN model for your high-dimensional data analysis tasks.</p>
 <ol>
     <li>
@@ -74,7 +74,7 @@ pip install -r requirements.txt</code></pre>
     </li>
 </ol>
 
-<h2>Modeling approach and definition</h2>
+<h2>Modeling Approach and Definition</h2>
 <p>
     Comprehensive documentation for SSM-DNN, including API details, examples, and theory, can be found in the <a href="Docs/">docs</a> directory.
 </p>
@@ -86,7 +86,7 @@ pip install -r requirements.txt</code></pre>
     <li><a href="https://dandiarchive.org/dandiset/001285?pos=1 target="_blank> EEG Anesthesia Dataset:</a> This dataset is being recorded as part of the research conducted in this study: <a href="https://www.pnas.org/doi/10.1073/pnas.1017041108">Tracking Brain States under General Anesthesia by Using Global Coherence Analysis</a>. It includes EEG data collected during anesthesia experiments to support the development and evaluation of the proposed models. The dataset adheres to ethical guidelines, with all necessary approvals obtained from relevant Institutional Review Boards (IRBs). The data is de-identified to ensure compliance with privacy standards and HIPAA regulations.</li>
 </ul>
     
-<h2>Examples</h2>
+<h2>Code Examples(Simulation and Read Data Applications)</h2>
 
 <article id="example-1">
 <h3>I. Brief Death Implicit Association Task (BDIT)</h3>
