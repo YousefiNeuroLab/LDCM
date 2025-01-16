@@ -105,7 +105,7 @@ assumption is as follows:
 epsilon is crrleated noise)</p>
 <p>The observation model is defined by Y<sub>k</sub> = C ⋅ X<sub>k</sub> + D</p>
 <p>The label of class is defined by XXXXXXXX</p>
-<p>For DNN, we use a CNN with 2 inputs and 2 convolution layer
+<p>For DNN, we use a CNN with 2 inputs and 2 convolution layer. The code of this application can be found here:
     <ul>
       <li><a href="https://colab.research.google.com" target="_blank">Data Generation Code</a></li>
       <li><a href="https://colab.research.google.com" target="_blank">Model Training Code:</a> We use MCMC method for the posterior 
