@@ -89,7 +89,7 @@ pip install -r requirements.txt</code></pre>
 <h2>Code Examples(Simulation and Real Data Applications)</h2>
 
 <article id="example-2">
-<h3>II. Simulated data Classification</h3>
+<h3>I. Simulated data Classification</h3>
 <p>
   In this example, we create simulation data replicating SSM-DNN. The model
 assumption is as follows:
@@ -118,7 +118,7 @@ estimation</li>
 </p>
     
 <article id="example-1">
-<h3>I. Brief Death Implicit Association Task (BDIAT)</h3>
+<h3>II. Brief Death Implicit Association Task (BDIAT)</h3>
 <p>
   Here, we demonstrate an application of SSM-DNN in BDIAT task. For this 
 dataset, the observation is RT across 360 trials of task, as describe here. 
