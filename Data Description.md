@@ -26,3 +26,4 @@
     for each trial. In this research, we use RT data to examine the extent to which participant phenotype, 
     <strong>MDD vs. CTL</strong>, is encoded in the RT data.
   </p>
+<img src="Pictures/Logo_LDCM.png" alt="LCDM Picture" height="320" width="320">
