@@ -50,7 +50,7 @@ The graph illustrates how the EM algorithm converges to a local maximum by itera
     </figcaption>
 
 ### Decoding
-The decoding process predicts the label probability per trial using state inference derived from observed data.
+The [decoding process](API.md) predicts the label probability per trial using state inference derived from observed data.
 
 ---
 
