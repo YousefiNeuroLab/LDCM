@@ -31,7 +31,7 @@ Deep neural networks (DNNs), including CNNs and RNNs, have revolutionized neuros
 
 ## Methods
 
-### Model Definition
+### [Model Definition](Documentation.pdf)
 SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning tasks of DNNs. It includes:
 - A **latent variable** capturing essential dynamics from biobehavioral signals.
 - State and observation models represented mathematically.
