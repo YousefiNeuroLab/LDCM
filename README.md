@@ -165,7 +165,7 @@ pip install -r requirements.txt</code></pre>
 }</code></pre>
 
 <h2>Collaboration and Contribution</h2>
-<p>We welcome contributions! Please see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines.</p>
+<p>We welcome your contribution in this research! Please check <a href="here">Contribution.md</a> for guidelines.</p>
 
 <h2>License</h2>
 <p>
