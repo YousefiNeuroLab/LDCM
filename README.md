@@ -169,7 +169,7 @@ pip install -r requirements.txt</code></pre>
 
 <h2>License</h2>
 <p>
-    This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.
+    This project is licensed under the MIT License. See the <a href="LICENSE">lincense</a> file for details.
 </p>
 
 <h2>Acknowledgments</h2>
