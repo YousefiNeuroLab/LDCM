@@ -37,6 +37,7 @@ SSM-DNN combines latent dynamical manifolds from SSMs with supervised learning t
 - State and observation models represented mathematically.
 - Training via Expectation-Maximization (EM) combined with MCMC sampling for latent state inference.
   ![Pictures/Model-Structure.png](https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/Model-Structure.png))
+  <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/Model-Structure.png" alt="LCDM Picture" height="320" width="320">
 
 ### Training
 The model training involves:
