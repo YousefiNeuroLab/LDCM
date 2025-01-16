@@ -138,7 +138,7 @@ pip install -r requirements.txt</code></pre>
 
 
 <h2>Citation</h2>
-<p>If you use SSM-DNN in your research, please cite us:</p>
+<p>If you would use SSM-DNN in your research, please cite the following research papers:</p>
 <pre><code>@@article{Paper1,
   title = {Novel techniques for neural data analysis},
   author = {Smith, J. and Doe, J.},
