@@ -51,7 +51,7 @@ mixture of behavioral signals.</li>
 cd ldCm
 pip install -r requirements.txt</code></pre>
 
-<h2>How to Use SSN-DNN Package</h2>
+<h2>How to Use SSM-DNN Package</h2>
 <p>To use this toolkit, follow the step-by-step instructions provided below to set up, train, and evaluate the SSM-DNN model for your high-dimensional data analysis tasks.</p>
 <ol>
     <li>
