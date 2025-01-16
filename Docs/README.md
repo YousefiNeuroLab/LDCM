@@ -48,7 +48,8 @@ The model training involves:
 2. **M-step:** Updating parameters with stochastic gradient ascent.
 - <figure>
     <img src="https://github.com/YousefiNeuroLab/LDCM/blob/main/Pictures/EM-algorithm.png" alt="EM" height="300" width="360">
-    <figcaption><strong>Convergance of the EM algorithm</strong>
+    <figcaption><strong>Expectation-Maximization (EM) Algorithm for Maximum Likelihood Estimation</strong>
+The graph illustrates how the EM algorithm converges to a local maximum by iteratively performing the E-step and M-step.
     </figcaption>
 </figure>
 
