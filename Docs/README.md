@@ -72,7 +72,7 @@ This project is sponsored by the **Defense Advanced Research Projects Agency (DA
 ---
 
 ## References
-For full references, please refer to the [documentation](Documentation.pdf).
+You can find a draft of our working paper [here](Documentation.pdf).
 
 ---
 
