@@ -88,16 +88,55 @@ pip install -r requirements.txt</code></pre>
     
 <h2>Code Examples(Simulation and Real Data Applications)</h2>
 
+<article id="example-2">
+<h3>II. Simulated data Classification</h3>
+<p>
+  In this example, we create simulation data replicating SSM-DNN. The model
+assumption is as follows:
+</p>
+<ul>
+  <li><strong>State Dimension:</strong> 2</li>
+  <li><strong>Observation Dimension:</strong> 6</li>
+  <li><strong>Number of trials::</strong> 400</li>
+  <li><strong>Number of samples per trial:</strong> 25</li>
+  <li><strong>Class labels:</strong> 2, Class A and class B</li>
+</ul>
+<p>The state equation is a multivariate normal followed by X_k+1 = A * X_k + 
+B+ e (we assume A to be an identity matrix and B is vector Zero, and 
+epsilon is crrleated noise)</p>
+<p>The observation model is defined by Y_k = C X_k +D</p>
+<p>The label of class is defined by XXXXXXXX</p>
+<p>For DNN, we use a CNN with 2 inputs and 2 convolution layer
+    <ul>
+      <li>Data Generation Code</li>
+      <li>Model Training Code: We use MCMC method for the posterior 
+estimation of the state (4000 particles) and EM algorithm for training</li>
+      <li>Decoding (Label Prediction) Code: We predict DNN probability of 
+Class A and Class B using 4000 partcile samples drawn from the satte 
+estimation</li>
+    </ul>
+</p>
+    
 <article id="example-1">
 <h3>I. Brief Death Implicit Association Task (BDIAT)</h3>
 <p>
-  We validate our approach using behavioral data recorded during an <a href="Data Description.md" target="_blank">Implicit Association Test (IAT)</a>,
-  where participants classify labels (e.g., MDD vs. CTRL). Our results demonstrate that the framework
-  achieves superior accuracy, sensitivity, and specificity compared to existing methods. This contribution
-  addresses the critical need for approaches that balance interpretability with predictive power, making our
-  framework particularly valuable for analyzing biological and neural data.
+  Here, we demonstrate an application of SSM-DNN in BDIAT task. For this 
+dataset, the observation is RT across 360 trials of task, as describe here. 
+There are 23 participants in total, where we know whether the participant 
+is from CTL (healthy) or Major Depressive Disorder (MDD) group. We 
+consider each participant data as a trial, thus, we have 23 trials in our task 
+and the number of sampels per trial is 360. For each trial, the label can 
+present either MDD or CTRL group.
 </p>
-<h4>Explore Code:</h4>
+<p>The observation dimension is 1, and we use a random walk model as the 
+state process. Here, SSM works as adaptive smoother. The DNN is a 1-
+dimensional CNN with 2 layer of convoltuin and max-pooling. We use a 
+cross-validation scheme to assess prediction accuracy along with sepecificty
+and sensvicity of our model. We compared our model with DNN alone, and 
+other modeling frameowkr such as XXX and YYY, and found our model can 
+reach higher prediction accuracy with a more balanced specificity and 
+senisivity.  Different steps of the framework implementation using SSM-
+DNN can be found here:</p>
 <ul>
     <li><a href="Neural_Network_for_Classification_Task.py">Neural Network for Classification Task</a>: Demonstrates how to implement and train a neural network for EEG data classification and visualize its performance.
     </li>
@@ -109,33 +148,6 @@ pip install -r requirements.txt</code></pre>
     </li>
 </ul>
 </article>
-
-<article id="example-2">
-<h3>II. Simulated data Classification</h3>
-<p>
-  In this example, we create a simulated dataset with the following characteristics:
-</p>
-<ul>
-  <li><strong>Observation Dimension:</strong> 2</li>
-  <li><strong>Latent State Dimension:</strong> 2</li>
-  <li><strong>Trials:</strong> 400</li>
-  <li><strong>Time Steps per Trial:</strong> 25</li>
-</ul>
-<p>
-  We applied our framework using <strong>4000 particles</strong> to infer the classification results.
-  The 1D Convolutional Neural Network (CNN) used in this example consists of <strong>two convolutional layers</strong>
-  and is optimized with the <strong>ADAM optimizer</strong>. This example demonstrates how the model handles
-  time-series data in scenarios with predefined dimensionalities and trial structures.
-</p>
-<h4>Explore Code:</h4>
-<ul>
-  <li>
-    <a href="https://colab.research.google.com/drive/1-F3BZ0BUh1HzCy5zRQy911UAcI7O6T8q#scrollTo=sGYr5ho1iHdu/" target="_blank">
-      Colab Notebook for Simulated Observation Dataset
-    </a>
-  </li>
-</ul>
-
 
 <h2>Citation</h2>
 <p>If you would use SSM-DNN in your research, please cite the following research papers:</p>
