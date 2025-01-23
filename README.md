@@ -106,10 +106,10 @@ epsilon is crrleated noise)</p>
 <p>The label for each trial is determined based on the sum of its samples. If the sum of the first half of the samples in a trial is less than the sum of the second half, the label is 0; otherwise, the label is 1.</p>
 <p>For DNN, we use a CNN with 2 inputs and 2 convolution layer. The code of this application can be found here:
     <ul>
-      <li><a href="https://colab.research.google.com" target="_blank">Data Generation Code</a></li>
-      <li><a href="https://colab.research.google.com" target="_blank">Model Training Code:</a> We use MCMC method for the posterior 
+      <li><a href="https://colab.research.google.com/drive/18Wcm5t-hYAOvKSRQU8Bqwe9gDDsNFbAM?usp=sharing" target="_blank">Data Generation Code</a></li>
+      <li><a href="https://colab.research.google.com/drive/1qOBHu-s5S9zgThrnBL-WxDIcSorDwW-j?usp=sharing" target="_blank">Model Training Code:</a> We use MCMC method for the posterior 
 estimation of the state (4000 particles) and EM algorithm for training</li>
-      <li><a href="https://colab.research.google.com" target="_blank">Decoding (Label Prediction) Code:</a> We predict DNN probability of 
+      <li><a href="https://colab.research.google.com/drive/1wVEpB33TGXw-um628gvJ1YZpyDQYcgFS?usp=sharing="_blank">Decoding (Label Prediction) Code:</a> We predict DNN probability of 
 Class A and Class B using 4000 partcile samples drawn from the satte 
 estimation</li>
     </ul>
