@@ -69,7 +69,7 @@ pip install -r requirements.txt</code></pre>
         <pre><code>python visualize.py --results_dir ./results</code></pre>
     </li>
     <li>
-        <strong>Run on Google Colab:</strong> Use the pre-configured <a href="https://colab.research.google.com" target="_blank">notebook</a> for an interactive experience
+        <strong>Run on Google Colab:</strong> Use the pre-configured <a href="https://colab.research.google.com/drive/1RgI11zXQVrGYWM6YJHpDwTqSYQWZ9RlL?usp=sharing" target="_blank">notebook</a> for an interactive experience
     </li>
 </ol>
 
